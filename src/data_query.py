@@ -7,7 +7,7 @@ import logging
 # --------------------------
 # Configuration
 # --------------------------
-API_KEY = "55bc10e5-ce8e-4a18-ba6f-fdee71636724"
+API_KEY = os.environ["BKK_API_KEY"]  # get one at https://opendata.bkk.hu
 URL = f"https://go.bkk.hu/api/query/v1/ws/gtfs-rt/full/VehiclePositions.pb?key={API_KEY}"
 SAVE_DIR = "dynamic_gtfs"
 INTERVAL_SECONDS = 60      # Run every 1 minute
